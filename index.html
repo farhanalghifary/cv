@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farhan Alghifary — Creative Designer, UI Designer &amp; AI Video Specialist</title>
+<meta name="description" content="Portfolio and CV of Farhan Alghifary. Creative and UI designer with four years in Indonesia's capital market ecosystem, now generating cinematic video with AI at Vidio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+
+  --bg:#FBFBFA;
+  --surface:#FFFFFF;
+  --surface-2:#F7F6F3;
+  --text:#111111;
+  --text-2:#2F3437;
+  --muted:#787774;
+  --border:#EAEAEA;
+  --btn-bg:#111111;
+  --btn-text:#FFFFFF;
+  --btn-hover:#333333;
+  --nav-bg:rgba(251,251,250,.82);
+  --spot:rgba(180,150,110,.05);
+
+  --red-bg:#FDEBEC;  --red-tx:#9F2F2D;
+  --blue-bg:#E1F3FE; --blue-tx:#1F6C9F;
+  --green-bg:#EDF3EC;--green-tx:#346538;
+  --yellow-bg:#FBF3DB;--yellow-tx:#956400;
+
+  --sans:'Geist','SF Pro Display','Helvetica Neue','Switzer',sans-serif;
+  --serif:'Instrument Serif','Newsreader','Lyon Text','Playfair Display',serif;
+  --mono:'Geist Mono','SF Mono','JetBrains Mono',monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#191918;--surface:#1F1F1E;--surface-2:#252524;
+    --text:#EDEDEB;--text-2:#CFCFCB;--muted:#9B9A97;--border:#2E2E2C;
+    --btn-bg:#EDEDEB;--btn-text:#111111;--btn-hover:#FFFFFF;
+    --nav-bg:rgba(25,25,24,.82);--spot:rgba(200,170,130,.05);
+    --red-bg:#3A2423;--red-tx:#F0A9A6;
+    --blue-bg:#1F3140;--blue-tx:#8CC6EE;
+    --green-bg:#22301F;--green-tx:#9CCB9E;
+    --yellow-bg:#3A311A;--yellow-tx:#E6C57A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#191918;--surface:#1F1F1E;--surface-2:#252524;
+  --text:#EDEDEB;--text-2:#CFCFCB;--muted:#9B9A97;--border:#2E2E2C;
+  --btn-bg:#EDEDEB;--btn-text:#111111;--btn-hover:#FFFFFF;
+  --nav-bg:rgba(25,25,24,.82);--spot:rgba(200,170,130,.05);
+  --red-bg:#3A2423;--red-tx:#F0A9A6;
+  --blue-bg:#1F3140;--blue-tx:#8CC6EE;
+  --green-bg:#22301F;--green-tx:#9CCB9E;
+  --yellow-bg:#3A311A;--yellow-tx:#E6C57A;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{
+  margin:0;background:var(--bg);color:var(--text-2);
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+.icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ambient layer */
+.ambient{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 50% at 78% 8%,var(--spot),transparent 70%)}
+main,header,footer{position:relative;z-index:1}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.narrow{max-width:800px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+  background:var(--nav-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:600;letter-spacing:-.01em;color:var(--text)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+.nav ul a{transition:color .2s}
+.nav ul a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-btn{font:inherit;font-size:13px;background:transparent;color:var(--muted);
+  border:1px solid var(--border);border-radius:6px;padding:5px 10px;cursor:pointer;transition:color .2s,border-color .2s}
+.theme-btn:hover{color:var(--text)}
+@media (max-width:680px){.nav ul{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;font-weight:500;
+  background:var(--btn-bg);color:var(--btn-text);border:1px solid var(--btn-bg);
+  border-radius:6px;padding:11px 18px;cursor:pointer;transition:background .2s,transform .15s}
+.btn:hover{background:var(--btn-hover)}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--border)}
+.btn.ghost:hover{background:var(--surface-2)}
+
+/* tags */
+.tag{display:inline-block;border-radius:9999px;padding:3px 10px;font-size:11px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.05em;line-height:1.5}
+.tag.red{background:var(--red-bg);color:var(--red-tx)}
+.tag.blue{background:var(--blue-bg);color:var(--blue-tx)}
+.tag.green{background:var(--green-bg);color:var(--green-tx)}
+.tag.yellow{background:var(--yellow-bg);color:var(--yellow-tx)}
+
+/* type */
+h1,h2,h3{color:var(--text);margin:0}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;line-height:1.1}
+h1.serif{font-size:clamp(44px,7.2vw,84px)}
+h2.serif{font-size:clamp(34px,4.6vw,52px)}
+em{font-style:italic}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:clamp(17px,1.8vw,20px);color:var(--text-2);max-width:620px;margin:0}
+.muted{color:var(--muted)}
+
+/* sections */
+section{padding:112px 0}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:56px}
+.hero{padding:104px 0 96px}
+.hero .meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:32px}
+.hero .loc{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
+.hero h1{max-width:900px;margin-bottom:28px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+@media (max-width:680px){section{padding:80px 0}.hero{padding:72px 0 64px}}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;
+  display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.c7{grid-column:span 7}.c5{grid-column:span 5}.c4{grid-column:span 4}.c6{grid-column:span 6}
+.stat{font-family:var(--serif);font-size:clamp(56px,7vw,88px);line-height:1;letter-spacing:-.04em;color:var(--text)}
+.stat.sm{font-size:clamp(44px,5vw,60px)}
+.card p{margin:0;font-size:15px;color:var(--muted);max-width:44ch}
+.card .top{display:flex;justify-content:space-between;align-items:center}
+.card .push{margin-top:auto}
+@media (max-width:860px){.c7,.c5,.c4,.c6{grid-column:span 12}.card{padding:28px}}
+@media (min-width:861px) and (max-width:1000px){.c4{grid-column:span 6}}
+
+/* window chrome */
+.win{border:1px solid var(--border);border-radius:8px;background:var(--surface-2);overflow:hidden;margin-top:6px}
+.win-bar{display:flex;gap:6px;padding:10px 12px;background:var(--surface);border-bottom:1px solid var(--border)}
+.win-bar i{width:9px;height:9px;border-radius:50%;background:var(--border);display:block}
+.win-body{padding:16px;display:grid;gap:10px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.win-row{display:flex;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.win-row:last-child{border:0;padding-bottom:0}
+.win-row b{font-weight:500;color:var(--text)}
+.swatches{display:flex;gap:6px}
+.swatches span{width:14px;height:14px;border-radius:3px;border:1px solid var(--border);display:block}
+
+/* experience */
+.jobs{border-top:1px solid var(--border)}
+.job{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:44px 0;border-bottom:1px solid var(--border)}
+.job .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:6px}
+.job h3{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:4px}
+.job .org{color:var(--muted);font-size:15px;margin-bottom:18px}
+.job ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.job li{position:relative;padding-left:20px;font-size:15px}
+.job li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--muted)}
+.job .sub{margin-top:14px;font-size:14px;color:var(--muted);max-width:60ch}
+.job .roles{display:grid;gap:44px}
+.job .role + .role{padding-top:44px;border-top:1px dashed var(--border)}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:12px;padding:36px 0}}
+
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.caps{grid-template-columns:1fr}}
+.caps .card h3{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{font-family:var(--mono);font-size:12px;border:1px solid var(--border);background:var(--surface-2);
+  color:var(--text-2);border-radius:4px;padding:4px 9px}
+
+/* education */
+.edu{display:grid;grid-template-columns:200px 1fr;gap:32px;border-top:1px solid var(--border);padding-top:44px}
+.edu .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:6px}
+.edu h3{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:4px}
+.edu blockquote{margin:22px 0 0;padding:0;font-family:var(--serif);font-size:24px;line-height:1.25;letter-spacing:-.02em;color:var(--text);max-width:34ch}
+.edu .cap{margin-top:12px;font-size:13px;color:var(--muted);font-family:var(--mono)}
+@media (max-width:760px){.edu{grid-template-columns:1fr;gap:12px}}
+
+/* contact */
+.contact{border-top:1px solid var(--border)}
+.contact h2{margin-bottom:24px;max-width:14ch}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.list{margin-top:56px;border-top:1px solid var(--border)}
+.list a,.list div{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px 0;border-bottom:1px solid var(--border);font-size:16px;color:var(--text);transition:padding .25s}
+.list a:hover{padding-left:6px}
+.list span.l{display:flex;align-items:center;gap:12px}
+.list .v{color:var(--muted);font-size:14px;text-align:right;word-break:break-all}
+
+footer{padding:40px 0 56px;border-top:1px solid var(--border)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:13px;color:var(--muted);align-items:center}
+kbd{font-family:var(--mono);font-size:12px;border:1px solid var(--border);border-radius:4px;background:var(--surface-2);padding:2px 7px;color:var(--text-2)}
+
+/* motion */
+.js .reveal{opacity:0;transform:translateY(12px);
+  transition:opacity 600ms cubic-bezier(.16,1,.3,1) calc(var(--i,0)*80ms),
+             transform 600ms cubic-bezier(.16,1,.3,1) calc(var(--i,0)*80ms)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+</svg>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">Farhan Alghifary</a>
+    <ul>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#craft">Craft</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle color theme">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="meta reveal">
+        <span class="tag green">Open to conversations</span>
+        <span class="loc"><svg class="icon"><use href="#i-pin"/></svg>Jakarta, Indonesia</span>
+      </div>
+      <h1 class="serif reveal" style="--i:1">Design for capital markets, product, and <em>motion</em>.</h1>
+      <p class="lede reveal" style="--i:2">
+        Creative and UI designer with more than four years inside Indonesia's capital market ecosystem at TICMI,
+        now producing cinematic AI-generated video for Vidio at EMTEK.
+      </p>
+      <div class="cta reveal" style="--i:3">
+        <a class="btn" href="https://s.id/farhan-porto" target="_blank" rel="noopener">View full portfolio<svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn ghost" href="mailto:alghifaryfarhan@gmail.com">Send an email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">01 — Impact</span>
+        <h2 class="serif">Numbers that came out of the work.</h2>
+      </div>
+
+      <div class="bento">
+        <article class="card c7 reveal" style="--i:0">
+          <div class="top"><span class="tag red">Vidio / EMTEK</span><span class="eyebrow">Per month</span></div>
+          <div class="stat">80+</div>
+          <p>Cinematic shots delivered every month for Vidio's digital platforms, using Veo, Seedance, and Runway alongside the Adobe suite.</p>
+        </article>
+        <article class="card c5 reveal" style="--i:1">
+          <div class="top"><span class="tag red">Vidio / EMTEK</span><span class="eyebrow">Turnaround</span></div>
+          <div class="stat">60%</div>
+          <p class="push">Faster production turnaround, with cinematic quality held constant.</p>
+        </article>
+
+        <article class="card c4 reveal" style="--i:0">
+          <div class="top"><span class="tag red">Vidio / EMTEK</span></div>
+          <div class="stat sm">2.3M</div>
+          <p>Monthly views added across Vidio's platforms by turning fresh digital trends into content.</p>
+        </article>
+        <article class="card c4 reveal" style="--i:1">
+          <div class="top"><span class="tag blue">TICMI</span></div>
+          <div class="stat sm">61K+</div>
+          <p>Visitors reached on the ticmiedu and ticmidata websites after a desktop and mobile UI redesign.</p>
+        </article>
+        <article class="card c4 reveal" style="--i:2">
+          <div class="top"><span class="tag blue">TICMI</span></div>
+          <div class="stat sm">3</div>
+          <p>New design systems documented in Figma, shared between designers, engineers, and PMs.</p>
+        </article>
+
+        <article class="card c4 reveal" style="--i:0">
+          <div class="top"><span class="tag blue">TICMI</span></div>
+          <div class="stat sm">20+</div>
+          <p>Events supported each year with teasers, promo videos, and motion graphics, including IDX and New Year campaigns.</p>
+        </article>
+        <article class="card c4 reveal" style="--i:1">
+          <div class="top"><span class="tag yellow">Founder</span></div>
+          <div class="stat sm">69K</div>
+          <p>Real followers built across @infoxiaomi and @infofone since 2018.</p>
+        </article>
+        <article class="card c4 reveal" style="--i:2">
+          <div class="top"><span class="tag yellow">Founder</span></div>
+          <div class="stat sm">1.3M</div>
+          <p>Audience reached, with more than 170.3K content impressions per year.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">02 — Experience</span>
+        <h2 class="serif">From market data to moving image.</h2>
+      </div>
+
+      <div class="jobs">
+
+        <article class="job reveal">
+          <div class="when">Mar 2026 — Present</div>
+          <div>
+            <h3>Generative Video Artist &amp; AI Specialist</h3>
+            <div class="org">PT Elang Mahkota Teknologi (EMTEK) · Vidio</div>
+            <ul>
+              <li>Lead fast-paced visual content creation for Vidio's digital platforms, delivering 80+ cinematic shots each month and cutting turnaround time by 60% without lowering cinematic quality.</li>
+              <li>Optimize AI tools (Veo, Seedance, Runway) together with the full Adobe suite to streamline the production workflow.</li>
+              <li>Track digital and tech trends and convert them into fresh content that added over 2.3 million monthly views across Vidio's platforms.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="when">Sep 2021 — Feb 2026<br>TICMI</div>
+          <div class="roles">
+            <div class="role">
+              <h3>Senior Creative Designer</h3>
+              <div class="org">The Indonesia Capital Market Institute (TICMI) · Jan 2024 — Feb 2026</div>
+              <ul>
+                <li>Redesigned UI for desktop and mobile across ticmiedu and ticmidata, including design systems, typography, UI components, and wireframes, contributing to 61K+ visitors.</li>
+                <li>Worked with PMs, engineers, and stakeholders, including the Strategic Team and C-levels, to build and maintain TICMI's digital products.</li>
+                <li>Established 3 new design systems in Figma with structure and guidelines that improved collaboration between designers, engineers, and PMs.</li>
+                <li>Onboarded new hires onto the company design systems and supported my team leader in reporting to management.</li>
+                <li>Brainstormed with C-levels on the concept and layout of the company's Annual Report.</li>
+              </ul>
+            </div>
+            <div class="role">
+              <h3>Creative Designer</h3>
+              <div class="org">The Indonesia Capital Market Institute (TICMI) · Sep 2021 — Dec 2023</div>
+              <ul>
+                <li>Delivered 100% of the content needs of the Business Development and Data Services teams.</li>
+                <li>Designed event and social media materials: logos, posters, e-books, banners, company profiles, pitch decks, and merchandise.</li>
+                <li>Built a monthly Editorial Plan with the Production team and a Content Writer.</li>
+                <li>Produced product teasers, promotional videos, and motion graphics for 20+ events a year, including the Indonesia Stock Exchange and New Year campaign.</li>
+                <li>Operated live broadcasts with OBS and vMix across YouTube, Zoom, Instagram, and Facebook, reaching over 1,000 viewers.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="when">Jan 2018 — Present</div>
+          <div>
+            <h3>Founder</h3>
+            <div class="org">@infoxiaomi and @infofone</div>
+            <ul>
+              <li>Create and manage daily content with Meta Business Suite and analyze account performance to widen audience reach.</li>
+              <li>Run a fan community with posts drawing up to 600 comments.</li>
+              <li>Built a promotion partnership with Alcatel Mobile Indonesia, using keyword research to drive the most valuable traffic.</li>
+              <li>Grew to 69,000 real followers and a 1.3M audience, with 170.3K+ content impressions per year.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CRAFT -->
+  <section id="craft">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">03 — Craft</span>
+        <h2 class="serif">Three disciplines, one workflow.</h2>
+      </div>
+
+      <div class="caps">
+        <article class="card reveal" style="--i:0">
+          <span class="tag red">Motion</span>
+          <h3>Generative video</h3>
+          <p>Prompt-driven cinematic shots, refined with the Adobe pipeline so AI output holds up on a streaming platform.</p>
+          <div class="chips push"><span class="chip">Veo</span><span class="chip">Seedance</span><span class="chip">Runway</span><span class="chip">Premiere Pro</span><span class="chip">After Effects</span><span class="chip">CapCut</span></div>
+        </article>
+
+        <article class="card reveal" style="--i:1">
+          <span class="tag blue">Product</span>
+          <h3>UI design &amp; design systems</h3>
+          <p>Interfaces and component libraries for financial education and data products.</p>
+          <div class="win">
+            <div class="win-bar"><i></i><i></i><i></i></div>
+            <div class="win-body">
+              <div class="win-row"><b>Foundations</b><span class="swatches"><span style="background:#111"></span><span style="background:#787774"></span><span style="background:#EAEAEA"></span><span style="background:#E1F3FE"></span></span></div>
+              <div class="win-row"><b>Typography</b><span>Scale / Weights</span></div>
+              <div class="win-row"><b>Components</b><span>Figma / v3</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--i:0">
+          <span class="tag yellow">Brand</span>
+          <h3>Campaign &amp; event design</h3>
+          <p>Logos, posters, e-books, pitch decks, company profiles, and an Annual Report layout built with C-level input.</p>
+          <div class="chips push"><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">Canva</span><span class="chip">Figma</span></div>
+        </article>
+
+        <article class="card reveal" style="--i:1">
+          <span class="tag green">Channel</span>
+          <h3>Content &amp; live production</h3>
+          <p>Editorial planning, social content, and live-streamed events on OBS and vMix, backed by audience analytics.</p>
+          <div class="chips push"><span class="chip">OBS</span><span class="chip">vMix</span><span class="chip">Meta Business Suite</span><span class="chip">YouTube</span><span class="chip">Zoom</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">04 — Education</span>
+        <h2 class="serif">Research behind the interface.</h2>
+      </div>
+
+      <div class="edu reveal">
+        <div class="when">Feb 2023 — May 2025</div>
+        <div>
+          <h3>Universitas Bina Nusantara</h3>
+          <div class="muted" style="font-size:15px">Bachelor's Degree, Information Systems · Faculty of Information Systems · UI/UX Design focus</div>
+          <blockquote>User Interface Analysis of the TICMI EDU Application Using the Technology Acceptance Model (TAM 3)</blockquote>
+          <div class="cap">Thesis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">05 — Contact</span>
+        <h2 class="serif">Let's build something that <em>moves</em>.</h2>
+        <p class="lede">Open to design, UI, and generative video projects. The fastest way to reach me is email.</p>
+      </div>
+
+      <div class="links reveal">
+        <a class="btn" href="mailto:alghifaryfarhan@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>Email me</a>
+        <a class="btn ghost" href="https://s.id/farhan-porto" target="_blank" rel="noopener"><svg class="icon"><use href="#i-link"/></svg>Portfolio</a>
+      </div>
+
+      <div class="list reveal">
+        <a href="mailto:alghifaryfarhan@gmail.com"><span class="l"><svg class="icon"><use href="#i-mail"/></svg>Email</span><span class="v">alghifaryfarhan@gmail.com</span></a>
+        <a href="tel:+622298079578"><span class="l"><svg class="icon"><use href="#i-phone"/></svg>Phone</span><span class="v">+628 22 9807 9578</span></a>
+        <a href="https://www.linkedin.com/in/farhanalghifary" target="_blank" rel="noopener"><span class="l"><svg class="icon"><use href="#i-in"/></svg>LinkedIn</span><span class="v">linkedin.com/in/farhanalghifary</span></a>
+        <a href="https://s.id/farhan-porto" target="_blank" rel="noopener"><span class="l"><svg class="icon"><use href="#i-link"/></svg>Portfolio</span><span class="v">s.id/farhan-porto</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Farhan Alghifary · Jakarta, Indonesia</span>
+    <span>Press <kbd>T</kbd> to switch theme</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  root.classList.add('js');
+
+  /* scroll reveal */
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* theme */
+  function stored(){ try { return localStorage.getItem('theme'); } catch(e){ return null; } }
+  function save(v){ try { localStorage.setItem('theme', v); } catch(e){} }
+  var s = stored();
+  if (s === 'light' || s === 'dark') root.setAttribute('data-theme', s);
+
+  function current(){
+    var t = root.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function toggle(){
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    save(next);
+  }
+  var btn = document.getElementById('themeBtn');
+  if (btn) btn.addEventListener('click', toggle);
+  document.addEventListener('keydown', function(e){
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (e.target && e.target.tagName) || '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    if (e.key === 't' || e.key === 'T') toggle();
+  });
+})();
+</script>
+</body>
+</html>
